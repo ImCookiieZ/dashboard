@@ -1,0 +1,53 @@
+version: '3'
+
+networks:
+  result-tier: null
+  back-tier:
+
+    null
+volumes:
+  db-data:
+
+    null
+services:
+  website:
+    build: dashboard/.
+    restart: always
+    networks:
+      - back-tier
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db
+      - server
+    environment:
+      - "POSTGRES_USER=postgres"
+      - "POSTGRES_PASSWORD=password"
+
+  db:
+    image: postgres:12
+    restart: always
+    networks:
+      - result-tier
+      - back-tier
+    ports:
+      - "5432:5432"
+    volumes:
+      - db-data:/var/lib/postgresql/data
+      - ./schema.sql:/docker-entrypoint-initdb.d/init.sql
+    environment:
+      - "POSTGRES_USER=postgres"
+      - "POSTGRES_PASSWORD=password"
+
+  server:
+    depends_on:
+      - db
+    build: server/.
+    restart: always
+    ports:
+      - "8080:80"
+    networks:
+      - result-tier
+    environment:
+      - "DB_USER=postgres"
+      - "DB_PASSWORD=password"

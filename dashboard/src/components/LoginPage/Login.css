@@ -1,0 +1,44 @@
+.login {
+    color: whitesmoke;
+}
+
+input {
+    height: 36px;
+    width: 256px;
+    padding: 10px 15px;
+    margin: 10px 15px;
+    border-radius: 8px;
+    background-color: #F8F8F8;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    height: 36px;
+    width: 128px;
+    padding: 10px 15px;
+    margin: 10px 15px;
+    border-radius: 8px;
+    background-color: #F8F8F8;
+    box-sizing: border-box;
+}
+
+label {
+    display: block;
+    font-size: 24px;
+    padding: 10px 15px;
+    transition: 0.4s;
+}
+
+.sign-up {
+    padding-top: 4rem;
+    color: whitesmoke;
+}
+
+h1 {
+    margin-bottom: 5px;
+}
+
+.message {
+    color: firebrick;
+    padding: 10px 15px;
+}

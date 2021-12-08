@@ -1,0 +1,19 @@
+.login-page {
+    background-color: #060b26;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 8rem;
+}
+
+button {
+    color: whitesmoke;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    text-decoration: underline;
+    display: inline;
+    margin: 0;
+    padding: 0;
+}

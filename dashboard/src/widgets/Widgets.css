@@ -1,0 +1,30 @@
+.loading {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.k-card-body {
+    overflow-y: scroll;
+}
+
+.container ul {
+    list-style-type: none;
+}
+
+.container p {
+    font-style: italic;
+}
+
+.container li {
+    margin-bottom: 2rem;
+}
+
+.close-btn {
+    color: crimson;
+    position: absolute;
+    top: 16px;
+    right: 16px;
+}
